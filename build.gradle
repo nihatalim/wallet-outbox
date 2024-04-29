@@ -1,0 +1,24 @@
+plugins {
+	id 'java'
+}
+
+allprojects {
+	apply plugin: 'java'
+	group = 'com.trendyol'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '17'
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
+	}
+
+	dependencies {
+		compileOnly 'org.projectlombok:lombok'
+		annotationProcessor 'org.projectlombok:lombok'
+	}
+
+	repositories {
+		mavenCentral()
+	}
+}

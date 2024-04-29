@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  outbox-db:
+    container_name: outbox-db
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=outbox
+      - POSTGRES_PASSWORD=outbox
+      - POSTGRES_DB=outbox
+    ports:
+      - '7979:5432'
+    volumes:
+      - outbox_db:/var/lib/outbox-postgresql/data
+volumes:
+  outbox_db:
+    driver: local
