@@ -18,7 +18,12 @@ public class WalletPortAdapter implements WalletPort {
     }
 
     @Override
-    public void save(Wallet wallet) {
-        walletRepository.save(WalletEntity.of(wallet));
+    public Optional<Wallet> getWalletByMemberId(Long memberId) {
+        return walletRepository.findByMemberId(memberId).map(WalletEntity::to);
+    }
+
+    @Override
+    public Wallet save(Wallet wallet) {
+        return walletRepository.save(WalletEntity.of(wallet)).to();
     }
 }

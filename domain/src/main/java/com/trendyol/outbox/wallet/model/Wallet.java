@@ -16,4 +16,12 @@ public class Wallet {
     public void addAmount(BigDecimal amount) {
         this.amount = this.amount.add(amount);
     }
+
+    public static Wallet of(Long memberId) {
+        return Wallet.builder()
+                .version(0L)
+                .memberId(memberId)
+                .amount(BigDecimal.ZERO)
+                .build();
+    }
 }

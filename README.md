@@ -1,1 +1,1 @@
-# wallet-outbox
+# wallet-notification

@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface WalletPort {
     Optional<Wallet> getWalletById(Long walletId);
-
-    void save(Wallet wallet);
+    Optional<Wallet> getWalletByMemberId(Long memberId);
+    Wallet save(Wallet wallet);
 }
