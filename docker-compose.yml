@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=outbox
       - POSTGRES_DB=outbox
     ports:
-      - '7979:5432'
+      - '7927:5432'
     volumes:
       - outbox_db:/var/lib/outbox-postgresql/data
 volumes:

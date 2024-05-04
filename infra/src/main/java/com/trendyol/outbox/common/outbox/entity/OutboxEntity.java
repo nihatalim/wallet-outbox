@@ -1,4 +1,4 @@
-package com.trendyol.outbox.common.outbox.adapter.entity;
+package com.trendyol.outbox.common.outbox.entity;
 
 import com.trendyol.outbox.common.BaseEntity;
 import jakarta.persistence.Column;
@@ -53,4 +53,8 @@ public class OutboxEntity extends BaseEntity {
 
     @Version
     private Long version;
+
+    public void increaseRetryCount() {
+        ++retryCount;
+    }
 }

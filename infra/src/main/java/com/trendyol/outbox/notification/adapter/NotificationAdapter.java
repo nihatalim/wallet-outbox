@@ -1,9 +1,9 @@
 package com.trendyol.outbox.notification.adapter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.trendyol.outbox.common.outbox.adapter.entity.OutboxEntity;
-import com.trendyol.outbox.common.outbox.adapter.entity.Status;
-import com.trendyol.outbox.common.outbox.adapter.jpa.OutboxRepository;
+import com.trendyol.outbox.common.outbox.entity.OutboxEntity;
+import com.trendyol.outbox.common.outbox.entity.Status;
+import com.trendyol.outbox.common.outbox.jpa.OutboxRepository;
 import com.trendyol.outbox.wallet.model.Notification;
 import com.trendyol.outbox.wallet.port.NotificationPort;
 import lombok.RequiredArgsConstructor;
